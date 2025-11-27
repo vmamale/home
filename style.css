@@ -132,6 +132,92 @@ ul.main-menu li a.active {
   border-bottom-color:#EF6D3D;
 }
 
+/* Menu list class */
+[class*="menu-level"] {
+    list-style: none;
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+[class*="menu-level"] li {
+    display: inline;
+    margin-right: 15px;
+}
+
+[class*="menu-level"] a {
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+
+[class*="menu-level"] a.active {
+    font-weight: bold;
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+}
+
+.menu-level-2 {
+    margin-left: 20px;
+}
+
+.menu-level-3 {
+    margin-left: 40px;
+}
+
+[class*="content-level"] {
+    margin-top: 15px;
+    padding: 15px;
+    border-left: 3px solid #ddd;
+    margin-left: 15px;
+}
+
+[class*="content-level"] h3 {
+    margin-top: 0;
+}
+
+[class*="content-level"] h4 {
+    margin-top: 0;
+    font-size: 1.05em;
+}
+
+[class*="content-level"] h5 {
+    margin: 10px 0 5px 0;
+    font-size: 1em;
+}
+
+.nav-link {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.project-menu {
+    list-style: none;
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+.project-menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.project-menu a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-menu a:hover {
+    text-decoration: underline;
+}
+
+
 /* Utility classes */
 .hide {
   display:none;
