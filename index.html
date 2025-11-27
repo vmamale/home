@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
   <head>
+    <meta name="google-site-verification" content="pGTOWL3MOUR9Pxw3wyIXNwJ80n-9NlhI3t0S9t_aiww" />
     <!-- Page setup -->
     <meta charset="utf-8">
-    <title>vinodmamale</title>
-    <meta name="description" content="A brief description of your site for search engines">
+    <title>Vinod Mamale</title>
+    <meta name="description" content="Vinod Mamale - Postdoctoral Fellow in Theoretical Physics. Personal website and Research activity">
+    <meta name="robots" content="index, follow">	
     <meta name="author" content="Information about the author here">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="icon" type="image/png" href="favicon.png">
@@ -13,7 +15,9 @@
     <!-- Reset default styles and add support for google fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
+ 
+	<!-- dygraph CSS -->
+    <link href="lib/dygraph.min.css" rel="stylesheet" type="text/css" />  
     <!-- Custom styles -->
     <link href="style.css" rel="stylesheet" type="text/css" />
 
@@ -28,14 +32,16 @@
   <body>
 
     <header id="header">
-      <img src="logo.jpg">
       <h1>Vinod Mamale</h1>
       
       <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
       <ul class="main-menu">
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#talks">Presentations</a></li>
+        <li><a href="#non-academic">Non-academic</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>                 
     </header>
    
@@ -46,21 +52,63 @@
           <div id="home" class="content-region hide">
             <h2>Home</h2>
             <p>
-              Hi! Welcome to my webpage
+              Hi! Welcome to my Homepage!
             </p>
+            <p>I am a postdoctoral fellow in the field of theoretical Phyiscs.</p>
+	    <p>Research Interests:</p>
+	    <p>Lattice Field Theory </p>
+	    <p>Lattice Quantum Chromodynamics</p>
+	    <p>Lattice Supersymmetry</p>
+	    <p>Topological Defects</p>
+	    <p>Strongly interacting systems</p>
+	    <!-- <p><a href="cv.pdf">Latest CV</a></p> -->
+    	<footer>  
+ 		Hope you found what you were looking for. If not, don't hesitate to contact me. Good Day!
+    	</footer>
+	<br><br><br><br><br><br><br>
+	<div class="sub-footer">
+	Background Image: Hubble Ultra Deep Field, Credit: NASA, ESA, and S. Beckwith (STScI) and the HUDF Team 
+	</div>
+
           </div>
           
-          <div id="about" class="content-region hide">
-            <h2>About</h2>
-            <p>
-              I am a postdoctoral research fellow in the field of theoretical Phyiscs 
-            </p>
+          
+          <div id="projects" class="content-region">
+		<ul class="project-menu">
+		<li><a href="3dq8/3dq8.html" id="secret-link" style="visibility:hidden;">3DQ8</a></li>
+    		</ul>
+          </div>
+
+          <div id="publications" class="content-region hide">
+            <h2>Publications</h2>
+            <p><a href="https://inspirehep.net/authors/1886955" style="color: blue;" >Inspire HEP</a></p>
+            <p>Selected Publications: </p>
+            <p>"Confinement-deconfinement transition in SU (3)−Higgs theory”, Sanatan
+Digal, Vinod Mamale, Sabiar Shaikh;<a href="https://arxiv.org/abs/2211.06586" style="color: brown;"> arXiv:2211.06586 [hep-lat]</a>, <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.054503" style="color: gray;">Phys.Rev.D108 (2023) 5, 054503.</a></p>
+            <p>"Parametric resonance in abelian and non-abelian gauge fields via space-
+time oscillations”, Shreyansh S. Dave, Sanatan Digal, Vinod Mamale;
+<a href="https://arxiv.org/abs/2301.07456" style="color: brown;">arXiv:2301.07456 [hep-ph]</a>, <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.109.076023" style="color: gray;">Phys.Rev.D 109 (2024) 7, 076023.</a></p>
+          </div>
+
+          <div id="talks" class="content-region hide">
+            <h2>Presentations</h2>
           </div>
           
-          <div id="contact" class="content-region hide">
+	<div id="non-academic" class="content-region hide">
+            <h2>Non-academic</h2>	
+		<ul class="project-menu">
+		<li><a href="non-academic/wanderings.html">Wanderings</a></li>
+		<li><a href="non-academic/anime.html">Anime</a></li>
+		<li><a href="non-academic/random.html">Random</a></li>
+    		</ul>
+          </div>
+          
+
+	<div id="contact" class="content-region hide">
             <h2>Contact</h2>
             <p>
-              Email: vinodmamale@gmail.com
+              Email: vinodmamale@gmail.com<br>
+	      Email: vinod.mamale@wits.ac.za
             </p>
           </div>
           
@@ -68,9 +116,6 @@
       </div>
     </div>
 
-    <footer>  
-      
-    </footer>
     
     <!-- Load additional JS scripts here -->
     <script type="text/javascript" src="script.js"></script>
