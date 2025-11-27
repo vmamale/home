@@ -26,4 +26,23 @@
     
   });
   
+	// Handle multi-level nested menus
+$(document).on('click', '[class*="menu-level"] a', function(e) {
+    e.preventDefault();
+    
+    // Get the parent container of this menu
+    var parentContainer = $(this).closest('[class*="content-level"], .content-region');
+    
+    // Hide all siblings of the target content
+    var targetId = $(this).attr('href');
+    parentContainer.find('> [class*="content-level"]').hide();
+    
+    // Show the clicked content
+    $(targetId).show();
+    
+    // Highlight active link
+    $(this).closest('[class*="menu-level"]').find('a').removeClass('active');
+    $(this).addClass('active');
+});
+
 })(jQuery);

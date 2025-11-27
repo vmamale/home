@@ -1,0 +1,671 @@
+<html><head>
+<script src="../../../lib/dygraph.min.js"></script>
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/2.2.1/dygraph.min.js"></script>-->
+<style type="text/css">
+  #main{
+    margin-right:19em;
+    position:relative;
+    min-height:0
+  }
+  #main h2 {background-color:#f0f0f0}
+  h1, h2, h3 {margin-bottom:1em}
+  h2, h3, h4 a, h5 a {padding:3px 10px}
+  h2, h3, h4, h5 {font-size:1em}
+</style>
+<title>3dq8_nc2_16nt16_l0.2_b0.3_g0.10</title>
+</head>
+<body>
+<div id="main">
+  <p>Last update: 2026 Feb 09 </p>
+  <h1><a name="phys"></a>Physical observables</h1>
+  <hr><br>
+ 
+  <div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>|deltaS| vs. t</th><th>accP vs. t</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="dS"></div>
+	<div id="legend00" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("dS"),
+                            "abs_dS.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 5, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend00'),
+				xlabel: 't'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="accP"></div>
+	<div id="legend01" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("accP"),
+                            "accP.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend01'),
+				xlabel: 't'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+  <div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>bigeig </th><th>bilin</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="bigeig"></div>
+	<div id="legend02" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("bigeig"),
+                            "bigeig.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 5, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green", "purple", "brown"],
+                                showRoller: true,
+				legend: 'always',
+                                labelsDiv: document.getElementById('legend02'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="bilin"></div>
+	<div id="legend03" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("bilin"),
+                            "bilin.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 5, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend03'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+  <div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>cg_iters vs.t</th><th>cond_num vs. t</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="cgiters"></div>
+	<div id="legend04" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("cgiters"),
+                            "cg_iters.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend04'),
+				xlabel: 't'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="condnum"></div>
+	<div id="legend05" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("condnum"),
+                            "cond_num.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend05'),
+				xlabel: 't'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+  <div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>deltaS </th><th>det</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="deltas"></div>
+	<div id="legend06" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("deltas"),
+                            "deltaS.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 5, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend06'),
+				xlabel: 't'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="det"></div>
+	<div id="legend07" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("det"),
+                            "det.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend07'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+  
+<div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>eig </th><th>exp_dS</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="eig"></div>
+	<div id="legend08" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("eig"),
+                            "eig.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 5, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green", "purple", "brown"],
+                                showRoller: true,
+				legend: 'always',
+                                labelsDiv: document.getElementById('legend08'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="expds"></div>
+	<div id="legend09" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("expds"),
+                            "exp_dS.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              showRoller: true,
+				colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend09'),
+				xlabel: 't'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+  <div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>Flink </th><th>force</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="flink"></div>
+	<div id="legend010" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("flink"),
+                            "Flink.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend010'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="force"></div>
+	<div id="legend011" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("force"),
+                            "force.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend011'),
+				xlabel: 't'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+
+  <div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>lines_mod </th><th>lines_mod_polar</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="linesmod"></div>
+	<div id="legend014" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("linesmod"),
+                            "lines_mod.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend014'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="linesmodpolar"></div>
+	<div id="legend015" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("linesmodpolar"),
+                            "lines_mod_polar.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend015'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+
+<div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>Fermion_Bilinear </th><th></th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="f_biline"></div>
+	<div id="legend016" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("f_biline"),
+                            "F_bilinear.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green", "purple", "brown"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend016'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+<br><br><p align="right"><a href="#top">Return to top</a></p>
+
+
+
+<div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>plaq </th><th>poly</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="plaq"></div>
+	<div id="legend020" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("plaq"),
+                            "plaq.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green", "purple", "brown"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend020'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="poly"></div>
+	<div id="legend021" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("poly"),
+                            "poly.csv",
+				{
+				strokeWidth: 0, //linewidth                          
+                              drawPoints: true,        // shows points
+				pointSize: 1,            // size of points 
+				rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend021'),
+				xlabel: 'ReTr(L)'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+<div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>poly_mod </th><th>poly_mod_polar</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="polymod"></div>
+	<div id="legend22" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("polymod"),
+                            "poly_mod.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green", "purple", "brown"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend022'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="polymodpolar"></div>
+	<div id="legend023" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("polymodpolar"),
+                            "poly_mod_polar.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend023'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+<div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>poly_polar </th><th>SB</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="polypolar"></div>
+	<div id="legend024" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("polypolar"),
+                            "poly_polar.csv",
+				{
+				strokeWidth: 0, //linewidth
+				drawPoints: true,        // shows points
+				pointSize: 1,            // size of points (adjust if needed)
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green", "purple", "brown"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend024'),
+				xlabel: 'ReTr(L)'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="sb"></div>
+	<div id="legend025" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("sb"),
+                            "SB.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend025'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+<div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>scalar_eig_ave </th><th>scalar_eig</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="scalareigave"></div>
+	<div id="legend026" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("scalareigave"),
+                            "scalar_eig_ave.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green", "purple", "brown"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend026'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="scalareig"></div>
+	<div id="legend027" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("scalareig"),
+                            "scalar_eig.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend027'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+<div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>scalar_eig_widths </th><th>SF</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="scalareigwidths"></div>
+	<div id="legend028" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("scalareigwidths"),
+                            "scalar_eig_widths.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green", "purple", "brown"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend028'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="sf"></div>
+	<div id="legend029" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("sf"),
+                            "SF.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend029'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+
+<div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>mono </th><th>walltime</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="mono"></div>
+	<div id="legend017" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("mono"),
+                            "mono.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend017'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="walltime"></div>
+	<div id="legend033" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("walltime"),
+                            "walltime.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend033'),
+				xlabel: 't'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+<div style="width:880px; height:330px;">
+    <table>
+      <tr>
+	<tr><th>wallTU </th><th>widths</th></tr>  
+        <td style="position: relative; width:400px; height:300px;">
+          <div id="walltu"></div>
+	<div id="legend034" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("walltu"),
+                            "wallTU.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green", "purple", "brown"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend034'),
+				xlabel: 't'
+                            });
+          </script>
+        </td>
+
+        <td style="position: relative; width:400px; height:300px;">
+	<div id="widths"></div>
+	<div id="legend035" style="position:absolute; top:10px; right:10px;"></div>
+          <script type="text/javascript">
+            g = new Dygraph(document.getElementById("widths"),
+                            "widths.csv",
+				{
+				strokeWidth: 1.0, //linewidth                          
+                              rollPeriod: 1, //smoothing scale with 1 it's raw data 
+                              colors: ["blue", "orange", "red", "green"],
+                                legend: 'always',
+                                labelsDiv: document.getElementById('legend035'),
+				xlabel: 'MDTU'
+                            });
+          </script>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+<br><br>
+
+<br><br><p align="right"><a href="#top">Return to top</a></p>
+</div>
+</body>
+</html>
+
+
