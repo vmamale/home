@@ -13,7 +13,9 @@
     <!-- Reset default styles and add support for google fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
+ 
+	<!-- dygraph CSS -->
+    <link href="lib/dygraph.min.css" rel="stylesheet" type="text/css" />  
     <!-- Custom styles -->
     <link href="style.css" rel="stylesheet" type="text/css" />
 
@@ -28,14 +30,14 @@
   <body>
 
     <header id="header">
-      <img src="logo.jpg">
       <h1>Vinod Mamale</h1>
       
       <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
       <ul class="main-menu">
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>                 
     </header>
    
@@ -46,21 +48,37 @@
           <div id="home" class="content-region hide">
             <h2>Home</h2>
             <p>
-              Hi! Welcome to my webpage
+              Hi! Welcome to my Homepage.
             </p>
+	
+    	<footer>  
+ 		Hope you found what you were looking for. If not, don't hesitate to contact me. Good Day!
+    	</footer>
           </div>
           
           <div id="about" class="content-region hide">
             <h2>About</h2>
             <p>
-              I am a postdoctoral research fellow in the field of theoretical Phyiscs 
+              I am a postdoctoral research fellow in the field of theoretical Phyiscs.<br>
+	      Research Interests:<br>
+		Lattice Field Theory  
             </p>
           </div>
           
+          <div id="projects" class="content-region">
+		<ul class="project-menu">
+       		 <li><a href="proj1.html">Project 1</a></li>
+		<li><a href="3dq8/3dq8.html" id="secret-link" style="visibility:hidden;">3DQ8</a></li>
+       		 <li><a href="proj4.html">Project 3</a></li>
+    		</ul>
+          </div>
+
+
           <div id="contact" class="content-region hide">
             <h2>Contact</h2>
             <p>
-              Email: vinodmamale@gmail.com
+              Email: vinodmamale@gmail.com<br>
+	      Email: vinod.mamale@wits.ac.za
             </p>
           </div>
           
@@ -68,9 +86,6 @@
       </div>
     </div>
 
-    <footer>  
-      
-    </footer>
     
     <!-- Load additional JS scripts here -->
     <script type="text/javascript" src="script.js"></script>
